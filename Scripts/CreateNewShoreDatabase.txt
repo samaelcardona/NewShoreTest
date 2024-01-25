@@ -1,0 +1,35 @@
+﻿CREATE DATABASE NewShoreTest;
+
+USE NewShoreTest;
+
+CREATE TABLE Journey (
+    JourneyID INT IDENTITY(1,1) PRIMARY KEY,
+    Origin NVARCHAR(50) NOT NULL,
+    Destination NVARCHAR(50) NOT NULL,
+    price INT,
+    CONSTRAINT UQ_Journey_Flight UNIQUE (Origin, Destination)    
+);
+
+CREATE TABLE Transport (
+    TransportID INT IDENTITY(1,1) PRIMARY KEY,
+    FlightCarrier NVARCHAR(50) NOT NULL,
+    FlightNumber NVARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Flight (
+    FlightID INT IDENTITY(1,1) PRIMARY KEY,
+    TransportID INT NOT NULL,
+    Origin NVARCHAR(50) NOT NULL,
+    Destination NVARCHAR(50) NOT NULL,
+    price INT NOT NULL,
+    CONSTRAINT UQ_Flight_Flight UNIQUE (Origin, Destination)    
+);
+
+CREATE TABLE JourneyFlight (
+    JourneyFlightID INT IDENTITY(1,1) PRIMARY KEY,
+    JourneyID INT NOT NULL,
+    FlightID INT NOT NULL,  
+    CONSTRAINT UQ_JourneyFlight_Flight UNIQUE (JourneyID, FlightID),
+    CONSTRAINT FK_JourneyFlight_JourneyID FOREIGN KEY (JourneyID) REFERENCES Journey(JourneyID),
+    CONSTRAINT FK_JourneyFlight_FlightID FOREIGN KEY (FlightID) REFERENCES Flight(FlightID)
+);
