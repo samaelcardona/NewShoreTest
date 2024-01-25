@@ -10,7 +10,7 @@ utiliza entityframework como orm, base de datos SQL SERVER.
 ## Instalación
 
 1. Clone el repositorio: `git clone https://github.com/samaelcardona/NewShoreTest.git`
-2. Abra el proyecto y en la carpeta scripts encontrara un script para crear la base de datos.
+2. Abra el proyecto con VisualStudio y en la carpeta scripts encontrara un script para crear la base de datos.
 3. Ejecute el script en dos pasos:
 	- ejecute la primera linea para crear la base de datos,
 	- ejecute el resto de codigo para crear las tablas. 
