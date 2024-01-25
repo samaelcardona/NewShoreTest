@@ -1,6 +1,12 @@
 @NewShoreTest_HostAddress = http://localhost:5157
 
-GET {{NewShoreTest_HostAddress}}/weatherforecast/
+Put {{NewShoreTest_HostAddress}}/api/NewShoreApi
 Accept: application/json
+Content-Type: application/json
+
+{
+  "origin": "MZL",
+  "destination": "BCN"
+}
 
 ###

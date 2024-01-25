@@ -3,15 +3,12 @@ using NewShoreTest.Business.Ports;
 using NewShoreTest.DataAccess.Interfaces;
 using NewShoreTest.DataAccess.IRepositories;
 using NewShoreTest.Models.ApiModels;
-using NewShoreTest.Models.BusinessModels;
 using NewShoreTest.Models.DataAccessModels;
-using System.Collections.Generic;
 
 namespace NewShoreTest.Business.Services
 {
     public class JourneyService : IJourneyService
     {
-
         private readonly IFlightService flightService;
         private readonly IJourneyRepository journeyRepository;
         private readonly IFlightRepository flightRepository;

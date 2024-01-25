@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using NewShoreTest.DataAccess.Context;
+﻿using NewShoreTest.DataAccess.Context;
 using NewShoreTest.DataAccess.Interfaces;
 using NewShoreTest.Models.DataAccessModels;
 
@@ -13,12 +12,6 @@ namespace NewShoreTest.DataAccess.Repositories
         public FlightRepository(NewShoreTestContext dbContext)
         {
             this.dbContext = dbContext;
-        }
-
-        public Flight GetFlightById(int flightId)
-        {
-            var flight = dbContext.Flights.Find(flightId);
-            return flight != null ? flight : new Flight();
         }
 
         public List<Flight> GetFlightByJouney(int journeyId)
@@ -37,22 +30,5 @@ namespace NewShoreTest.DataAccess.Repositories
             dbContext.SaveChanges();
             return flight.FlightId;
         }
-
-        public void UpdateFlight(Flight flight)
-        {
-            dbContext.Entry(flight).State = EntityState.Modified;
-            dbContext.SaveChanges();
-        }
-
-        public void DeleteFlight(int flightId)
-        {
-            var flightToDelete = dbContext.Flights.Find(flightId);
-            if (flightToDelete != null)
-            {
-                dbContext.Flights.Remove(flightToDelete);
-                dbContext.SaveChanges();
-            }
-        }
-
     }
 }

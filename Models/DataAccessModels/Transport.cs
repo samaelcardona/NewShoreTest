@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace NewShoreTest.Models.DataAccessModels;
+﻿namespace NewShoreTest.Models.DataAccessModels;
 
 public partial class Transport
 {
@@ -21,5 +18,4 @@ public partial class Transport
         FlightCarrier = flightCarrier;
         FlightNumber = flightNumber;
     }
-
 }

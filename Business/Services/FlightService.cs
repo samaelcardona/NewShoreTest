@@ -1,5 +1,4 @@
-﻿using NewShoreTest.Business.ExternalServices;
-using NewShoreTest.Business.Interfaces;
+﻿using NewShoreTest.Business.Interfaces;
 using NewShoreTest.Business.Ports;
 using NewShoreTest.Models.ApiModels;
 using NewShoreTest.Models.BusinessModels;
@@ -163,13 +162,20 @@ namespace NewShoreTest.Business.Services
 
         private List<FlightObj> MapFlights(List<FlightApi> flights)
         {
-            return flights.Select(f => new FlightObj
+            try
             {
-                Transport = new TransportObj(f.FlightCarrier,f.FlightNumber),
-                Origin = f.DepartureStation,
-                Destination = f.ArrivalStation,
-                Price = f.Price
-            }).ToList();
+                return flights.Select(f => new FlightObj
+                {
+                    Transport = new TransportObj(f.FlightCarrier,f.FlightNumber),
+                    Origin = f.DepartureStation,
+                    Destination = f.ArrivalStation,
+                    Price = f.Price
+                }).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error: {ex.Message}");
+            }
         }
         
         #endregion

@@ -1,5 +1,4 @@
-﻿using Azure;
-using NewShoreTest.Business.Interfaces;
+﻿using NewShoreTest.Business.Interfaces;
 using NewShoreTest.Models.BusinessModels;
 using Newtonsoft.Json;
 
@@ -9,6 +8,7 @@ namespace NewShoreTest.Business.ExternalServices
     {
 
         private readonly HttpClient _httpClient;
+        private const string urlNewShoreService = "https://recruiting-api.newshore.es/api/flights/2";
 
         public NewShoreAirFlightsService(HttpClient httpClient)
         {
@@ -19,8 +19,6 @@ namespace NewShoreTest.Business.ExternalServices
         {
             try
             {
-                string urlNewShoreService = "https://recruiting-api.newshore.es/api/flights/2";
-    
                 HttpResponseMessage response = await _httpClient.GetAsync(urlNewShoreService);
 
                 if (response.IsSuccessStatusCode)

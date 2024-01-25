@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace NewShoreTest.Models.DataAccessModels;
+﻿namespace NewShoreTest.Models.DataAccessModels;
 
 public partial class Journey
 {
@@ -26,5 +23,4 @@ public partial class Journey
         Destination = destination;
         Price = price;
     }
-
 }

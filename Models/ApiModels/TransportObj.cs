@@ -11,6 +11,5 @@
            this.FlightCarrier= FlightCarrier;
            this.FlightNumber= FlightNumber;
         }
-
     }
 }

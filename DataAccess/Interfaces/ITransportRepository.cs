@@ -9,9 +9,5 @@ namespace NewShoreTest.DataAccess.IRepositories
         Transport? GetTransportByCarrierNumber(string flightCarrier, string flightNumber);
 
         int AddTransport(Transport transport);
-
-        void UpdateTransport(Transport transport);
-
-        void DeleteTransport(int transportId);
     }
 }

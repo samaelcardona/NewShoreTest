@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using NewShoreTest.DataAccess.Context;
+﻿using NewShoreTest.DataAccess.Context;
 using NewShoreTest.DataAccess.Interfaces;
 using NewShoreTest.Models.DataAccessModels;
 
@@ -13,13 +12,6 @@ namespace NewShoreTest.DataAccess.Repositories
         {
             this.dbContext = dbContext;
         }
-
-        public Journey GetJourneyById(int journeyId)
-        {
-            var journey = dbContext.Journeys.Find(journeyId);
-            return journey != null ? journey : new Journey();
-        }
-
 
         public Journey? GetJourneyByOriginAndDestination(string origin, string destination)
         {
@@ -41,20 +33,5 @@ namespace NewShoreTest.DataAccess.Repositories
             dbContext.SaveChanges();
         }
 
-        public void UpdateJourney(Journey journey)
-        {
-            dbContext.Entry(journey).State = EntityState.Modified;
-            dbContext.SaveChanges();
-        }
-
-        public void DeleteJourney(int journeyId)
-        {
-            var journeyToDelete = dbContext.Journeys.Find(journeyId);
-            if (journeyToDelete != null)
-            {
-                dbContext.Journeys.Remove(journeyToDelete);
-                dbContext.SaveChanges();
-            }
-        }
     }
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace NewShoreTest.Models.DataAccessModels;
+﻿namespace NewShoreTest.Models.DataAccessModels;
 
 public partial class Flight
 {
@@ -29,5 +26,4 @@ public partial class Flight
         Destination = destination;
         Price = price;
     }
-
 }

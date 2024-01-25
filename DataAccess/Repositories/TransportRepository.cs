@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using NewShoreTest.DataAccess.Context;
+﻿using NewShoreTest.DataAccess.Context;
 using NewShoreTest.DataAccess.IRepositories;
 using NewShoreTest.Models.DataAccessModels;
 
@@ -33,22 +32,5 @@ namespace NewShoreTest.DataAccess.Repositories
             dbContext.SaveChanges();
             return transport.TransportId;
         }
-
-        public void UpdateTransport(Transport transport)
-        {
-            dbContext.Entry(transport).State = EntityState.Modified;
-            dbContext.SaveChanges();
-        }
-
-        public void DeleteTransport(int transportId)
-        {
-            var transportToDelete = dbContext.Transports.Find(transportId);
-            if (transportToDelete != null)
-            {
-                dbContext.Transports.Remove(transportToDelete);
-                dbContext.SaveChanges();
-            }
-        }
-
     }
 }

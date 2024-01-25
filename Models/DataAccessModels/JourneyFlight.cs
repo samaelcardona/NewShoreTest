@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace NewShoreTest.Models.DataAccessModels;
+﻿namespace NewShoreTest.Models.DataAccessModels;
 
 public partial class JourneyFlight
 {
@@ -20,5 +17,4 @@ public partial class JourneyFlight
         JourneyId = journeyId;
         FlightId = flightId;
     }
-
 }
