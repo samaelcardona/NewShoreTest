@@ -18,7 +18,7 @@ utiliza entityframework como orm, base de datos SQL SERVER.
 
 ## Uso
 
-Cuando corra la solucion puede probarlo con el UI de swagger 
+Cuando ejecute la solucion puede probarlo con el UI de swagger 
 (En la carpeta Models/ApiModels y la clase JsonRequestBodySchemaFilter 
 podra cambiar los parametros para probarla con swagger), 
 o puede realizar peticiones con postman o la aplicacion de preferencia
