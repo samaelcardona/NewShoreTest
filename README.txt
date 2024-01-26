@@ -1,7 +1,7 @@
 # NewShoreTest
 
 Proyecto creado apartir del enunciado de la prueba de desarrollo de NewShore,
-La cual solicita un intinerario para un viaje aereo de un punto a otro,
+La cual solicita un itinerario para un viaje aereo de un punto a otro,
 Nos solicitan calcular la ruta de acuerdo a las paradas y los vuelos de conexion 
 que se deban hacer. para el caculo se utiliza un algoritmo en anchura o BFS,
 En general es una Api Restful con .Net core, Tiene una arquitectura por capas, 
