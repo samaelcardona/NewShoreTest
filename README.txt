@@ -1,4 +1,4 @@
-﻿# NewShoreTest
+# NewShoreTest
 
 Proyecto creado apartir del enunciado de la prueba de desarrollo de NewShore,
 La cual solicita un intinerario para un viaje aereo de un punto a otro,

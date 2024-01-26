@@ -1,2 +1,2 @@
-# NewShoreTest
- NewShore technical test 
+# NewShoreTechnicalTest
+Test Newshore
