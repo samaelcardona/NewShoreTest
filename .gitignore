@@ -1,4 +1,4 @@
-# Archivos y carpetas específicos de Visual Studio
+# Archivos y carpetas espec�ficos de Visual Studio
 .vscode/
 *.vscode/
 *.suo
@@ -20,7 +20,7 @@
 *.VC.db
 *.VC.opendb
 
-# Carpeta bin y obj generadas durante la compilación
+# Carpeta bin y obj generadas durante la compilaci�n
 bin/
 obj/
 
@@ -30,14 +30,14 @@ packages/
 # Carpeta de resultados de prueba
 TestResults/
 
-# Carpeta de archivos de configuración local
+# Carpeta de archivos de configuraci�n local
 *.local
 
-# Carpeta temporal generada durante la compilación
+# Carpeta temporal generada durante la compilaci�n
 [Tt]emp/
 [Ii]ntermediate/
 
-# Archivos de usuario y configuración
+# Archivos de usuario y configuraci�n
 *.suo
 *.user
 *.userosscache
@@ -49,9 +49,9 @@ TestResults/
 # Carpeta de resultados de prueba generados por MSTest
 TestResults/
 
-# Carpeta de análisis de cobertura generada por MSTest
+# Carpeta de an�lisis de cobertura generada por MSTest
 .coverage/
 
-# Carpeta de artefactos de compilación y publicación
+# Carpeta de artefactos de compilaci�n y publicaci�n
 bin/
 obj/
