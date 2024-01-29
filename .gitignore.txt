@@ -1,0 +1,57 @@
+# Archivos y carpetas específicos de Visual Studio
+.vscode/
+*.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.log
+*.lib
+*.sbr
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+
+# Carpeta bin y obj generadas durante la compilación
+bin/
+obj/
+
+# Carpeta de paquetes de NuGet
+packages/
+
+# Carpeta de resultados de prueba
+TestResults/
+
+# Carpeta de archivos de configuración local
+*.local
+
+# Carpeta temporal generada durante la compilación
+[Tt]emp/
+[Ii]ntermediate/
+
+# Archivos de usuario y configuración
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos de log
+*.log
+
+# Carpeta de resultados de prueba generados por MSTest
+TestResults/
+
+# Carpeta de análisis de cobertura generada por MSTest
+.coverage/
+
+# Carpeta de artefactos de compilación y publicación
+bin/
+obj/
